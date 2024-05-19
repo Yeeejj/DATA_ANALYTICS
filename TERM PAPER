@@ -12,3 +12,1961 @@ Cyrel Jane A. Edaño
 
 Submitted To:
 Gerard D. Ompad
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage[mathletters]{ucs}
+\DeclareUnicodeCharacter{46}{\textperiodcentered}
+\DeclareUnicodeCharacter{58}{$\colon$}
+\DeclareUnicodeCharacter{32}{$\ $}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\pagestyle{empty}
+\usepackage[margin=0in,paperwidth=612pt,paperheight=792pt]{geometry}
+\begin{document}
+\definecolor{color_29791}{rgb}{0,0,0}
+\definecolor{color_35327}{rgb}{0,0.690196,0.313726}
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(258.17,-75.09998){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Term Paper }
+\put(291.05,-115.3){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(67.224,-159.34){\fontsize{18}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Emotion Recognition through Handwriting Analysis using }
+\put(222.29,-200.74){\fontsize{18}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Hybrid Approach }
+\put(57.024,-246.37){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(291.05,-286.57){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(64.824,-326.77){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}In Partial Fulfillment of The Requirements for CS 3203N Data Analytics Course }
+\put(174.14,-366.85){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Bachelor of Science in Computer Science }
+\put(291.05,-407.05){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(291.05,-447.27){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(250.37,-487.47){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Submitted By: }
+\put(233.09,-527.67){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Cyrel Jane A. Edaño }
+\put(57.024,-567.87){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(291.05,-608.1){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(250.73,-648.3){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Submitted To: }
+\put(240.65,-680.58){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Gerard D. Ompad }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(270.65,-73.15997){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Abstract }
+\put(93.02,-108.82){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}The study presents a novel approach to emotion recognition based on handwriting analysis }
+\put(57.024,-136.42){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}employing modern image processing and machine learning methods. Handwriting is believed to }
+\put(57.024,-164.02){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}contain tiny indications that can reveal one's inner emotional state. Self-reports and controlled }
+\put(57.024,-191.62){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}emotion induction experiments are used to collect a broad collection of handwriting examples }
+\put(57.024,-219.22){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}labelled with emotions. Image processing methods are used to extract relevant macro-level }
+\put(57.024,-246.85){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}elements like slant and spacing, as well as micro-level information like letterforms and strokes, }
+\put(57.024,-274.45){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}from handwritten data. These multimodal features train hybrid machine learning models that use }
+\put(57.024,-302.05){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}CNNs for feature extraction and Hidden Markov Models (HMMs) for sequence modelling and }
+\put(57.024,-329.53){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}emotion categorization. The new approach outperforms previous work in terms of classifying }
+\put(57.024,-357.13){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}emotional states such as happiness, sadness, and anger. Potential educational purposes are being }
+\put(57.024,-384.73){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}looked into allowing for prompt interventions by identifying early indicators of stress or emotional }
+\put(57.024,-412.35){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}distress in students via their handwriting. }
+\put(57.024,-447.99){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}  }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(279.41,-73.15997){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Introduction }
+\put(93.02,-108.82){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Emotions are complex psychological-physiological states that profoundly influence our }
+\put(57.024,-136.42){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}thoughts, behaviors, and decisions" (Lerner et al., 2015). Emotions are subjective feeling states, }
+\put(57.024,-164.02){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}characterized by a uniquely felt feeling component, such as happiness, sadness, fear, or anger, }
+\put(57.024,-191.62){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}accompanied by a concomitant physiological response, such as changes in heart rate, respiration, }
+\put(57.024,-219.22){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}hormone levels, and by an expressive response, such as facial expressions and body language. }
+\put(57.024,-246.85){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Essentially, emotions arise from the evaluation of events, situations, or stimuli as relevant to one's }
+\put(57.024,-274.45){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}well-being or goals and serve important functions, such as ascribing meaning to experiences, }
+\put(57.024,-302.05){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}facilitating social communication, and eliciting adaptive responses that aided survival across }
+\put(57.024,-329.53){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}human evolution. Awareness and an understanding of emotions are crucial because they shape our }
+\put(57.024,-357.13){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}perceptions, judgments, relationships, and goal-directed behaviors and thus influence nearly every }
+\put(57.024,-384.73){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}aspect of our daily lives and decision-making processes.  }
+\put(93.02,-420.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Handwriting is the skill of developing letters, words, and sentences with the help of a hand, }
+\put(57.024,-447.99){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}writing tool such as a pen or pencil, and a writing surface like paper (Deshpande, 2016). It is an }
+\put(57.024,-475.59){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}extremely complex neuromuscular exercise coordinating the hand and eye, motor skills, and }
+\put(57.024,-503.19){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}cognitive processes, and every person has his or her distinctive style of handwriting, which even }
+\put(57.024,-530.79){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}shows character and emotional states and can be used as an identification tool (Durga \& Deepu, }
+\put(57.024,-558.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2018). It is also considered an art form with numerous calligraphic techniques (Samsuryadi et al., }
+\put(57.024,-586.02){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2021). Knowing and understanding handwriting are important because it will, by an individual's }
+\put(57.024,-613.62){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}style of handwriting, provide clues to his or her personality and emotional well-being and indicate }
+\put(57.024,-641.22){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}suitability for given roles or certain tasks and, thus, being a very useful tool in numerous fields, }
+\put(57.024,-668.82){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}from psychology and forensics to human resources (Esposito et al., 2019). }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(93.02,-73.15997){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Understanding how emotions affect handwriting is really important. Emotions are key for }
+\put(57.024,-100.78){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}thinking, deciding, and behaving. And how emotions show in handwriting can tell us a lot about }
+\put(57.024,-128.38){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}someone's feelings. Looking at handwriting has been used in things like solving crimes, knowing }
+\put(57.024,-155.98){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}someone's personality, and in psychology. But now, with better tech, we can learn even more about }
+\put(57.024,-183.58){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}how emotions and handwriting are linked (Fairhurst et al., 2017). If we can understand how }
+\put(57.024,-211.18){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}emotions shape handwriting, we can make cool new tools. For instance, in school, looking at how }
+\put(57.024,-238.78){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}kids write could help see if they're having a hard time or feeling stressed. Then, we could help }
+\put(57.024,-266.41){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}them sooner (Robles-Bykbaev et al., 2021). In health care, seeing changes in handwriting could }
+\put(57.024,-294.01){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}help spot brain or mood issues tied to how emotions are handled (Schröter et al., 2003). And in }
+\put(57.024,-321.61){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}crime work and safety, checking handwriting for emotions could boost how we check docs and }
+\put(57.024,-349.21){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}see lies (Gritčina et al., 2021). Emotion are tied to thinking and actions, like handwriting. }
+\put(57.024,-376.81){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Handwriting, seen as just writing down words, shows feelings too. By studying how words are }
+\put(57.024,-404.41){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}written like pressure, slant, spaces, and strokes, we learn about the writer's emotions (Fairhurst et }
+\put(57.024,-432.03){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}al., 2017; Gritčina et al., 2021). This link between feelings and handwriting has use in many fields, }
+\put(57.024,-459.63){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}like psychology, schools, crime, and health care.  }
+\put(57.024,-495.15){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}1.2 Statement of the Problem }
+\put(57.024,-530.79){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}This study aims to develop and evaluate a system for emotion recognition from handwriting. This }
+\put(57.024,-558.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}system will utilize advanced image processing and machine learning techniques. }
+\put(57.024,-594.06){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}1.2.1 General Objective }
+\put(57.024,-629.58){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}The general objective of this study is to develop and evaluate a machine learning system capable }
+\put(57.024,-657.18){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}of classifying emotional states from student handwriting samples. Inspired by the EMOTHAW }
+\put(57.024,-684.776){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}database, Apply advanced image processing techniques.  }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(265.49,-73.15997){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Literature Review }
+\put(93.02,-108.82){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}The ability to identify the emotional state, such as negative emotions like depression, }
+\put(57.024,-136.42){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}anxiety, or stress, is a potential promise of handwriting analysis. Kedar (2015) and Kedar (2019) }
+\put(57.024,-164.02){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}pinpoint the potential of handwriting analysis. Likforman Sulem (2017) supports this by }
+\put(57.024,-191.62){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}developing a database to recognize emotional states from handwriting and drawing. Ahamad }
+\put(57.024,-219.22){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(2023) extends this to the model of combining machine learning, deep learning, and natural }
+\put(57.024,-246.85){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}language processing techniques to classify emotions from handwritten and text statements. This }
+\put(57.024,-274.45){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}research collectively highlights the potential of handwriting analysis as a tool for emotion }
+\put(57.024,-302.05){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}recognition.  }
+\put(93.02,-337.57){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Most of the previous work in emotion recognition through handwriting has been focused }
+\put(57.024,-365.17){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}on deep learning techniques (Adebiyi, 2023). Most of the studies are aimed at subsolving subtle }
+\put(57.024,-392.77){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}and complex emotion recognition, reducing the subjectivity and the inter-annotator variability, and }
+\put(57.024,-420.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}increasing the accuracy. However, robust deep learning models, integration of multiple modalities, }
+\put(57.024,-447.99){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}and the integration of physiological signals with behavioral signals are still required to fill this gap }
+\put(57.024,-475.59){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}in current research as more sophisticated deep learning models are bound to evolve. Future }
+\put(57.024,-503.19){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}research should consider the trend and development of emotion recognition using physiological }
+\put(57.024,-530.79){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}signals (Li, 2015; Zhang, 2015) and speech (Cuihua, 2005) for developing comprehensive and }
+\put(57.024,-558.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}accurate emotion recognition models.  }
+\put(93.02,-594.06){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Studies of emotion recognition through handwriting have addressed the motor theory, }
+\put(57.024,-621.66){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}development, and learning from various psychologists, including Kao (1986). It was argued that }
+\put(57.024,-649.26){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}handwriting can reflect emotional stress, though this 7 was hard to disentangle from acceleration }
+\put(57.024,-676.86){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}as such. According to Kedar, in 2015, there was a technique for automatic emotion recognition }
+\put(57.024,-704.456){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}through handwriting analysis, focusing on characteristics such as baseline, slant, pen-pressure, }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-73.15997){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}size, margin, and zone. Machine learning methods have been used in this area, but primarily within }
+\put(57.024,-100.78){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the context of computer recognition of handwriting (Plamondon, 1989). The impact of gender bias }
+\put(57.024,-128.38){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}on emotion recognition through handwriting has not been directly addressed in the literature. }
+\put(93.02,-164.02){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Likforman-Sulem et al. (2017) developed the innovative EMOTHAW database, marking }
+\put(57.024,-191.62){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}a significant step toward utilizing handwriting and drawing for emotional state recognition. Their }
+\put(57.024,-219.22){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}research examined the correlations between handwriting features, such as timing and pen pressure, }
+\put(57.024,-246.85){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}and measures of anxiety, depression, and stress. Using advanced machine learning techniques }
+\put(57.024,-274.45){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(random forests), they identified specific features indicative of particular emotional states, }
+\put(57.024,-302.05){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}achieving promising results in classifying anxiety and stress. This study underscores the potential }
+\put(57.024,-329.53){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}of handwriting analysis as a non-invasive tool for understanding emotional states, which could }
+\put(57.024,-357.13){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}have applications in mental health screening and wellbeing promotion. }
+\put(93.02,-392.77){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Handwriting analysis is one such complex field that focuses on the study of individual }
+\put(57.024,-420.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}expression through manual, aesthetic, emotional, and intellectual characteristics (Paget, 1940). }
+\put(57.024,-447.99){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Recent developments have witnessed the formulation of a dynamic model for handwriting, }
+\put(57.024,-475.59){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}wherein a differential equation is used to model time-varying behavior. For example, Yizhi }
+\put(57.024,-503.19){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}developed a differential equation to model time-varying behavior. Online fuzzy models were }
+\put(57.024,-530.79){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}applied by Bouillon (2015) in the analysis of handwriting quality, with an aim towards teaching }
+\put(57.024,-558.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}children how to write. The practical application of handwriting analysis was entailed by Bensefia }
+\put(57.024,-586.02){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(2004) wherein segmentation procedures and statistical tests were incorporated in order to verify }
+\put(57.024,-613.62){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the writer. All these studies, together, give an insight 10 into the multi-dimensionality of }
+\put(57.024,-641.22){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}handwriting analysis with its corresponding applications. }
+\put(57.024,-676.86){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}  }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_35327][even odd rule]
+(48.504pt, -92.85999pt) -- (132.504pt, -92.85999pt)
+ -- (132.504pt, -92.85999pt)
+ -- (132.504pt, -62.95599pt)
+ -- (132.504pt, -62.95599pt)
+ -- (48.504pt, -62.95599pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -92.85999pt) -- (132.504pt, -92.85999pt)
+ -- (132.504pt, -92.85999pt)
+ -- (132.504pt, -62.95599pt)
+ -- (132.504pt, -62.95599pt)
+ -- (48.48pt, -62.95599pt) -- cycle
+;
+\filldraw[color_35327][even odd rule]
+(53.304pt, -77.85999pt) -- (127.704pt, -77.85999pt)
+ -- (127.704pt, -77.85999pt)
+ -- (127.704pt, -62.95599pt)
+ -- (127.704pt, -62.95599pt)
+ -- (53.304pt, -62.95599pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -92.85999pt) -- (132.504pt, -92.85999pt)
+ -- (132.504pt, -92.85999pt)
+ -- (132.504pt, -62.95599pt)
+ -- (132.504pt, -62.95599pt)
+ -- (48.48pt, -62.95599pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(53.304,-74.14001){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Research }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\begin{scope}
+\clip
+(48.48pt, -92.85999pt) -- (132.504pt, -92.85999pt)
+ -- (132.504pt, -92.85999pt)
+ -- (132.504pt, -62.95599pt)
+ -- (132.504pt, -62.95599pt)
+ -- (48.48pt, -62.95599pt) -- cycle
+;
+\filldraw[color_35327][even odd rule]
+(53.304pt, -92.85999pt) -- (127.704pt, -92.85999pt)
+ -- (127.704pt, -92.85999pt)
+ -- (127.704pt, -77.85999pt)
+ -- (127.704pt, -77.85999pt)
+ -- (53.304pt, -77.85999pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -92.85999pt) -- (132.504pt, -92.85999pt)
+ -- (132.504pt, -92.85999pt)
+ -- (132.504pt, -62.95599pt)
+ -- (132.504pt, -62.95599pt)
+ -- (48.48pt, -62.95599pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(53.304,-89.02002){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Title/Paper }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_35327][even odd rule]
+(133.58pt, -92.85999pt) -- (203.444pt, -92.85999pt)
+ -- (203.444pt, -92.85999pt)
+ -- (203.444pt, -62.95599pt)
+ -- (203.444pt, -62.95599pt)
+ -- (133.58pt, -62.95599pt) -- cycle
+;
+\begin{scope}
+\clip
+(133.58pt, -92.85999pt) -- (203.444pt, -92.85999pt)
+ -- (203.444pt, -92.85999pt)
+ -- (203.444pt, -62.95599pt)
+ -- (203.444pt, -62.95599pt)
+ -- (133.58pt, -62.95599pt) -- cycle
+;
+\filldraw[color_35327][even odd rule]
+(138.5pt, -85.29999pt) -- (198.524pt, -85.29999pt)
+ -- (198.524pt, -85.29999pt)
+ -- (198.524pt, -70.396pt)
+ -- (198.524pt, -70.396pt)
+ -- (138.5pt, -70.396pt) -- cycle
+;
+\begin{scope}
+\clip
+(133.58pt, -92.85999pt) -- (203.444pt, -92.85999pt)
+ -- (203.444pt, -92.85999pt)
+ -- (203.444pt, -62.95599pt)
+ -- (203.444pt, -62.95599pt)
+ -- (133.58pt, -62.95599pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(138.5,-81.58002){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Model }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_35327][even odd rule]
+(204.53pt, -92.85999pt) -- (267.17pt, -92.85999pt)
+ -- (267.17pt, -92.85999pt)
+ -- (267.17pt, -62.95599pt)
+ -- (267.17pt, -62.95599pt)
+ -- (204.53pt, -62.95599pt) -- cycle
+;
+\begin{scope}
+\clip
+(204.53pt, -92.85999pt) -- (267.17pt, -92.85999pt)
+ -- (267.17pt, -92.85999pt)
+ -- (267.17pt, -62.95599pt)
+ -- (267.17pt, -62.95599pt)
+ -- (204.53pt, -62.95599pt) -- cycle
+;
+\filldraw[color_35327][even odd rule]
+(209.33pt, -85.29999pt) -- (262.37pt, -85.29999pt)
+ -- (262.37pt, -85.29999pt)
+ -- (262.37pt, -70.396pt)
+ -- (262.37pt, -70.396pt)
+ -- (209.33pt, -70.396pt) -- cycle
+;
+\begin{scope}
+\clip
+(204.53pt, -92.85999pt) -- (267.17pt, -92.85999pt)
+ -- (267.17pt, -92.85999pt)
+ -- (267.17pt, -62.95599pt)
+ -- (267.17pt, -62.95599pt)
+ -- (204.53pt, -62.95599pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(209.33,-81.58002){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Approach }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_35327][even odd rule]
+(268.25pt, -92.85999pt) -- (338.114pt, -92.85999pt)
+ -- (338.114pt, -92.85999pt)
+ -- (338.114pt, -62.95599pt)
+ -- (338.114pt, -62.95599pt)
+ -- (268.25pt, -62.95599pt) -- cycle
+;
+\begin{scope}
+\clip
+(268.25pt, -92.85999pt) -- (338.114pt, -92.85999pt)
+ -- (338.114pt, -92.85999pt)
+ -- (338.114pt, -62.95599pt)
+ -- (338.114pt, -62.95599pt)
+ -- (268.25pt, -62.95599pt) -- cycle
+;
+\filldraw[color_35327][even odd rule]
+(273.17pt, -85.29999pt) -- (333.194pt, -85.29999pt)
+ -- (333.194pt, -85.29999pt)
+ -- (333.194pt, -70.396pt)
+ -- (333.194pt, -70.396pt)
+ -- (273.17pt, -70.396pt) -- cycle
+;
+\begin{scope}
+\clip
+(268.25pt, -92.85999pt) -- (338.114pt, -92.85999pt)
+ -- (338.114pt, -92.85999pt)
+ -- (338.114pt, -62.95599pt)
+ -- (338.114pt, -62.95599pt)
+ -- (268.25pt, -62.95599pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(273.17,-81.58002){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Dataset }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_35327][even odd rule]
+(339.19pt, -92.85999pt) -- (409.03pt, -92.85999pt)
+ -- (409.03pt, -92.85999pt)
+ -- (409.03pt, -62.95599pt)
+ -- (409.03pt, -62.95599pt)
+ -- (339.19pt, -62.95599pt) -- cycle
+;
+\begin{scope}
+\clip
+(339.19pt, -92.85999pt) -- (409.03pt, -92.85999pt)
+ -- (409.03pt, -92.85999pt)
+ -- (409.03pt, -62.95599pt)
+ -- (409.03pt, -62.95599pt)
+ -- (339.19pt, -62.95599pt) -- cycle
+;
+\filldraw[color_35327][even odd rule]
+(343.99pt, -77.85999pt) -- (404.11pt, -77.85999pt)
+ -- (404.11pt, -77.85999pt)
+ -- (404.11pt, -62.95599pt)
+ -- (404.11pt, -62.95599pt)
+ -- (343.99pt, -62.95599pt) -- cycle
+;
+\begin{scope}
+\clip
+(339.19pt, -92.85999pt) -- (409.03pt, -92.85999pt)
+ -- (409.03pt, -92.85999pt)
+ -- (409.03pt, -62.95599pt)
+ -- (409.03pt, -62.95599pt)
+ -- (339.19pt, -62.95599pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(343.99,-74.14001){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Num of }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\begin{scope}
+\clip
+(339.19pt, -92.85999pt) -- (409.03pt, -92.85999pt)
+ -- (409.03pt, -92.85999pt)
+ -- (409.03pt, -62.95599pt)
+ -- (409.03pt, -62.95599pt)
+ -- (339.19pt, -62.95599pt) -- cycle
+;
+\filldraw[color_35327][even odd rule]
+(343.99pt, -92.85999pt) -- (404.11pt, -92.85999pt)
+ -- (404.11pt, -92.85999pt)
+ -- (404.11pt, -77.85999pt)
+ -- (404.11pt, -77.85999pt)
+ -- (343.99pt, -77.85999pt) -- cycle
+;
+\begin{scope}
+\clip
+(339.19pt, -92.85999pt) -- (409.03pt, -92.85999pt)
+ -- (409.03pt, -92.85999pt)
+ -- (409.03pt, -62.95599pt)
+ -- (409.03pt, -62.95599pt)
+ -- (339.19pt, -62.95599pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(343.99,-89.02002){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Participants }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_35327][even odd rule]
+(409.99pt, -92.85999pt) -- (472.774pt, -92.85999pt)
+ -- (472.774pt, -92.85999pt)
+ -- (472.774pt, -62.95599pt)
+ -- (472.774pt, -62.95599pt)
+ -- (409.99pt, -62.95599pt) -- cycle
+;
+\begin{scope}
+\clip
+(409.99pt, -92.85999pt) -- (472.774pt, -92.85999pt)
+ -- (472.774pt, -92.85999pt)
+ -- (472.774pt, -62.95599pt)
+ -- (472.774pt, -62.95599pt)
+ -- (409.99pt, -62.95599pt) -- cycle
+;
+\filldraw[color_35327][even odd rule]
+(414.91pt, -77.85999pt) -- (467.974pt, -77.85999pt)
+ -- (467.974pt, -77.85999pt)
+ -- (467.974pt, -62.95599pt)
+ -- (467.974pt, -62.95599pt)
+ -- (414.91pt, -62.95599pt) -- cycle
+;
+\begin{scope}
+\clip
+(409.99pt, -92.85999pt) -- (472.774pt, -92.85999pt)
+ -- (472.774pt, -92.85999pt)
+ -- (472.774pt, -62.95599pt)
+ -- (472.774pt, -62.95599pt)
+ -- (409.99pt, -62.95599pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(414.91,-74.14001){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Emotions }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\begin{scope}
+\clip
+(409.99pt, -92.85999pt) -- (472.774pt, -92.85999pt)
+ -- (472.774pt, -92.85999pt)
+ -- (472.774pt, -62.95599pt)
+ -- (472.774pt, -62.95599pt)
+ -- (409.99pt, -62.95599pt) -- cycle
+;
+\filldraw[color_35327][even odd rule]
+(414.91pt, -92.85999pt) -- (467.974pt, -92.85999pt)
+ -- (467.974pt, -92.85999pt)
+ -- (467.974pt, -77.85999pt)
+ -- (467.974pt, -77.85999pt)
+ -- (414.91pt, -77.85999pt) -- cycle
+;
+\begin{scope}
+\clip
+(409.99pt, -92.85999pt) -- (472.774pt, -92.85999pt)
+ -- (472.774pt, -92.85999pt)
+ -- (472.774pt, -62.95599pt)
+ -- (472.774pt, -62.95599pt)
+ -- (409.99pt, -62.95599pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(414.91,-89.02002){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Classified }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_35327][even odd rule]
+(473.86pt, -92.85999pt) -- (533.62pt, -92.85999pt)
+ -- (533.62pt, -92.85999pt)
+ -- (533.62pt, -62.95599pt)
+ -- (533.62pt, -62.95599pt)
+ -- (473.86pt, -62.95599pt) -- cycle
+;
+\begin{scope}
+\clip
+(473.86pt, -92.85999pt) -- (533.62pt, -92.85999pt)
+ -- (533.62pt, -92.85999pt)
+ -- (533.62pt, -62.95599pt)
+ -- (533.62pt, -62.95599pt)
+ -- (473.86pt, -62.95599pt) -- cycle
+;
+\filldraw[color_35327][even odd rule]
+(478.78pt, -85.29999pt) -- (528.82pt, -85.29999pt)
+ -- (528.82pt, -85.29999pt)
+ -- (528.82pt, -70.396pt)
+ -- (528.82pt, -70.396pt)
+ -- (478.78pt, -70.396pt) -- cycle
+;
+\begin{scope}
+\clip
+(473.86pt, -92.85999pt) -- (533.62pt, -92.85999pt)
+ -- (533.62pt, -92.85999pt)
+ -- (533.62pt, -62.95599pt)
+ -- (533.62pt, -62.95599pt)
+ -- (473.86pt, -62.95599pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(478.78,-81.58002){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Accuracy }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(47.4pt, -62.96002pt) -- (48.36pt, -62.96002pt)
+ -- (48.36pt, -62.96002pt)
+ -- (48.36pt, -62pt)
+ -- (48.36pt, -62pt)
+ -- (47.4pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(47.4pt, -62.96002pt) -- (48.36pt, -62.96002pt)
+ -- (48.36pt, -62.96002pt)
+ -- (48.36pt, -62pt)
+ -- (48.36pt, -62pt)
+ -- (47.4pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(48.36pt, -62.96002pt) -- (132.504pt, -62.96002pt)
+ -- (132.504pt, -62.96002pt)
+ -- (132.504pt, -62pt)
+ -- (132.504pt, -62pt)
+ -- (48.36pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -62.96002pt) -- (133.46pt, -62.96002pt)
+ -- (133.46pt, -62.96002pt)
+ -- (133.46pt, -62pt)
+ -- (133.46pt, -62pt)
+ -- (132.5pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(133.46pt, -62.96002pt) -- (203.444pt, -62.96002pt)
+ -- (203.444pt, -62.96002pt)
+ -- (203.444pt, -62pt)
+ -- (203.444pt, -62pt)
+ -- (133.46pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -62.96002pt) -- (204.41pt, -62.96002pt)
+ -- (204.41pt, -62.96002pt)
+ -- (204.41pt, -62pt)
+ -- (204.41pt, -62pt)
+ -- (203.45pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(204.41pt, -62.96002pt) -- (267.17pt, -62.96002pt)
+ -- (267.17pt, -62.96002pt)
+ -- (267.17pt, -62pt)
+ -- (267.17pt, -62pt)
+ -- (204.41pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -62.96002pt) -- (268.13pt, -62.96002pt)
+ -- (268.13pt, -62.96002pt)
+ -- (268.13pt, -62pt)
+ -- (268.13pt, -62pt)
+ -- (267.17pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(268.13pt, -62.96002pt) -- (338.114pt, -62.96002pt)
+ -- (338.114pt, -62.96002pt)
+ -- (338.114pt, -62pt)
+ -- (338.114pt, -62pt)
+ -- (268.13pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -62.96002pt) -- (339.07pt, -62.96002pt)
+ -- (339.07pt, -62.96002pt)
+ -- (339.07pt, -62pt)
+ -- (339.07pt, -62pt)
+ -- (338.11pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(339.07pt, -62.96002pt) -- (409.03pt, -62.96002pt)
+ -- (409.03pt, -62.96002pt)
+ -- (409.03pt, -62pt)
+ -- (409.03pt, -62pt)
+ -- (339.07pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -62.96002pt) -- (409.99pt, -62.96002pt)
+ -- (409.99pt, -62.96002pt)
+ -- (409.99pt, -62pt)
+ -- (409.99pt, -62pt)
+ -- (409.03pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.99pt, -62.96002pt) -- (472.774pt, -62.96002pt)
+ -- (472.774pt, -62.96002pt)
+ -- (472.774pt, -62pt)
+ -- (472.774pt, -62pt)
+ -- (409.99pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -62.96002pt) -- (473.74pt, -62.96002pt)
+ -- (473.74pt, -62.96002pt)
+ -- (473.74pt, -62pt)
+ -- (473.74pt, -62pt)
+ -- (472.78pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(473.74pt, -62.96002pt) -- (533.62pt, -62.96002pt)
+ -- (533.62pt, -62.96002pt)
+ -- (533.62pt, -62pt)
+ -- (533.62pt, -62pt)
+ -- (473.74pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -62.96002pt) -- (534.58pt, -62.96002pt)
+ -- (534.58pt, -62.96002pt)
+ -- (534.58pt, -62pt)
+ -- (534.58pt, -62pt)
+ -- (533.62pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -62.96002pt) -- (534.58pt, -62.96002pt)
+ -- (534.58pt, -62.96002pt)
+ -- (534.58pt, -62pt)
+ -- (534.58pt, -62pt)
+ -- (533.62pt, -62pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(47.4pt, -92.85999pt) -- (48.36pt, -92.85999pt)
+ -- (48.36pt, -92.85999pt)
+ -- (48.36pt, -62.95599pt)
+ -- (48.36pt, -62.95599pt)
+ -- (47.4pt, -62.95599pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -92.85999pt) -- (133.46pt, -92.85999pt)
+ -- (133.46pt, -92.85999pt)
+ -- (133.46pt, -62.95599pt)
+ -- (133.46pt, -62.95599pt)
+ -- (132.5pt, -62.95599pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -92.85999pt) -- (204.41pt, -92.85999pt)
+ -- (204.41pt, -92.85999pt)
+ -- (204.41pt, -62.95599pt)
+ -- (204.41pt, -62.95599pt)
+ -- (203.45pt, -62.95599pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -92.85999pt) -- (268.13pt, -92.85999pt)
+ -- (268.13pt, -92.85999pt)
+ -- (268.13pt, -62.95599pt)
+ -- (268.13pt, -62.95599pt)
+ -- (267.17pt, -62.95599pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -92.85999pt) -- (339.07pt, -92.85999pt)
+ -- (339.07pt, -92.85999pt)
+ -- (339.07pt, -62.95599pt)
+ -- (339.07pt, -62.95599pt)
+ -- (338.11pt, -62.95599pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -92.85999pt) -- (409.99pt, -92.85999pt)
+ -- (409.99pt, -92.85999pt)
+ -- (409.99pt, -62.95599pt)
+ -- (409.99pt, -62.95599pt)
+ -- (409.03pt, -62.95599pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -92.85999pt) -- (473.74pt, -92.85999pt)
+ -- (473.74pt, -92.85999pt)
+ -- (473.74pt, -62.95599pt)
+ -- (473.74pt, -62.95599pt)
+ -- (472.78pt, -62.95599pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -92.85999pt) -- (534.58pt, -92.85999pt)
+ -- (534.58pt, -92.85999pt)
+ -- (534.58pt, -62.95599pt)
+ -- (534.58pt, -62.95599pt)
+ -- (533.62pt, -62.95599pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -227.86pt) -- (132.504pt, -227.86pt)
+ -- (132.504pt, -227.86pt)
+ -- (132.504pt, -93.82001pt)
+ -- (132.504pt, -93.82001pt)
+ -- (48.48pt, -93.82001pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -227.86pt) -- (132.504pt, -227.86pt)
+ -- (132.504pt, -227.86pt)
+ -- (132.504pt, -93.82001pt)
+ -- (132.504pt, -93.82001pt)
+ -- (48.48pt, -93.82001pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(53.304,-104.98){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}EMOTHAW: }
+\put(53.304,-119.86){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}A Novel }
+\put(53.304,-134.74){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Database for }
+\put(53.304,-149.62){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Emotional }
+\put(53.304,-164.5){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}State }
+\put(53.304,-179.38){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Recognition }
+\put(53.304,-194.26){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}from }
+\put(53.304,-209.26){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Handwriting }
+\put(53.304,-224.14){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}and Drawing }
+\put(138.5,-157.06){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}EMOTHA}
+\put(138.5,-171.94){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}W Model }
+\put(209.33,-157.06){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Random }
+\put(209.33,-171.94){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Forests }
+\put(273.17,-157.06){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}EMOTHA}
+\put(273.17,-171.94){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}W database }
+\put(343.99,-164.5){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}129 }
+\put(414.91,-157.06){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Anxiety, }
+\put(414.91,-171.94){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Stress }
+\put(478.78,-142.18){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Anxiety: }
+\put(478.78,-157.06){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}71.6\% }
+\put(478.78,-171.94){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Stress: }
+\put(478.78,-186.82){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}70.8\% }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(47.4pt, -93.82001pt) -- (48.36pt, -93.82001pt)
+ -- (48.36pt, -93.82001pt)
+ -- (48.36pt, -92.85999pt)
+ -- (48.36pt, -92.85999pt)
+ -- (47.4pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(48.36pt, -93.82001pt) -- (132.504pt, -93.82001pt)
+ -- (132.504pt, -93.82001pt)
+ -- (132.504pt, -92.85999pt)
+ -- (132.504pt, -92.85999pt)
+ -- (48.36pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -93.82001pt) -- (133.46pt, -93.82001pt)
+ -- (133.46pt, -93.82001pt)
+ -- (133.46pt, -92.85999pt)
+ -- (133.46pt, -92.85999pt)
+ -- (132.5pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(133.46pt, -93.82001pt) -- (203.444pt, -93.82001pt)
+ -- (203.444pt, -93.82001pt)
+ -- (203.444pt, -92.85999pt)
+ -- (203.444pt, -92.85999pt)
+ -- (133.46pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -93.82001pt) -- (204.41pt, -93.82001pt)
+ -- (204.41pt, -93.82001pt)
+ -- (204.41pt, -92.85999pt)
+ -- (204.41pt, -92.85999pt)
+ -- (203.45pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(204.41pt, -93.82001pt) -- (267.17pt, -93.82001pt)
+ -- (267.17pt, -93.82001pt)
+ -- (267.17pt, -92.85999pt)
+ -- (267.17pt, -92.85999pt)
+ -- (204.41pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -93.82001pt) -- (268.13pt, -93.82001pt)
+ -- (268.13pt, -93.82001pt)
+ -- (268.13pt, -92.85999pt)
+ -- (268.13pt, -92.85999pt)
+ -- (267.17pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(268.13pt, -93.82001pt) -- (338.114pt, -93.82001pt)
+ -- (338.114pt, -93.82001pt)
+ -- (338.114pt, -92.85999pt)
+ -- (338.114pt, -92.85999pt)
+ -- (268.13pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -93.82001pt) -- (339.07pt, -93.82001pt)
+ -- (339.07pt, -93.82001pt)
+ -- (339.07pt, -92.85999pt)
+ -- (339.07pt, -92.85999pt)
+ -- (338.11pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(339.07pt, -93.82001pt) -- (409.03pt, -93.82001pt)
+ -- (409.03pt, -93.82001pt)
+ -- (409.03pt, -92.85999pt)
+ -- (409.03pt, -92.85999pt)
+ -- (339.07pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -93.82001pt) -- (409.99pt, -93.82001pt)
+ -- (409.99pt, -93.82001pt)
+ -- (409.99pt, -92.85999pt)
+ -- (409.99pt, -92.85999pt)
+ -- (409.03pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.99pt, -93.82001pt) -- (472.774pt, -93.82001pt)
+ -- (472.774pt, -93.82001pt)
+ -- (472.774pt, -92.85999pt)
+ -- (472.774pt, -92.85999pt)
+ -- (409.99pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -93.82001pt) -- (473.74pt, -93.82001pt)
+ -- (473.74pt, -93.82001pt)
+ -- (473.74pt, -92.85999pt)
+ -- (473.74pt, -92.85999pt)
+ -- (472.78pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(473.74pt, -93.82001pt) -- (533.62pt, -93.82001pt)
+ -- (533.62pt, -93.82001pt)
+ -- (533.62pt, -92.85999pt)
+ -- (533.62pt, -92.85999pt)
+ -- (473.74pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -93.82001pt) -- (534.58pt, -93.82001pt)
+ -- (534.58pt, -93.82001pt)
+ -- (534.58pt, -92.85999pt)
+ -- (534.58pt, -92.85999pt)
+ -- (533.62pt, -92.85999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(47.4pt, -227.86pt) -- (48.36pt, -227.86pt)
+ -- (48.36pt, -227.86pt)
+ -- (48.36pt, -93.82001pt)
+ -- (48.36pt, -93.82001pt)
+ -- (47.4pt, -93.82001pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -227.86pt) -- (133.46pt, -227.86pt)
+ -- (133.46pt, -227.86pt)
+ -- (133.46pt, -93.82001pt)
+ -- (133.46pt, -93.82001pt)
+ -- (132.5pt, -93.82001pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -227.86pt) -- (204.41pt, -227.86pt)
+ -- (204.41pt, -227.86pt)
+ -- (204.41pt, -93.82001pt)
+ -- (204.41pt, -93.82001pt)
+ -- (203.45pt, -93.82001pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -227.86pt) -- (268.13pt, -227.86pt)
+ -- (268.13pt, -227.86pt)
+ -- (268.13pt, -93.82001pt)
+ -- (268.13pt, -93.82001pt)
+ -- (267.17pt, -93.82001pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -227.86pt) -- (339.07pt, -227.86pt)
+ -- (339.07pt, -227.86pt)
+ -- (339.07pt, -93.82001pt)
+ -- (339.07pt, -93.82001pt)
+ -- (338.11pt, -93.82001pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -227.86pt) -- (409.99pt, -227.86pt)
+ -- (409.99pt, -227.86pt)
+ -- (409.99pt, -93.82001pt)
+ -- (409.99pt, -93.82001pt)
+ -- (409.03pt, -93.82001pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -227.86pt) -- (473.74pt, -227.86pt)
+ -- (473.74pt, -227.86pt)
+ -- (473.74pt, -93.82001pt)
+ -- (473.74pt, -93.82001pt)
+ -- (472.78pt, -93.82001pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -227.86pt) -- (534.58pt, -227.86pt)
+ -- (534.58pt, -227.86pt)
+ -- (534.58pt, -93.82001pt)
+ -- (534.58pt, -93.82001pt)
+ -- (533.62pt, -93.82001pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -318.25pt) -- (132.504pt, -318.25pt)
+ -- (132.504pt, -318.25pt)
+ -- (132.504pt, -228.826pt)
+ -- (132.504pt, -228.826pt)
+ -- (48.48pt, -228.826pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -318.25pt) -- (132.504pt, -318.25pt)
+ -- (132.504pt, -318.25pt)
+ -- (132.504pt, -228.826pt)
+ -- (132.504pt, -228.826pt)
+ -- (48.48pt, -228.826pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(53.304,-239.98){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Emotion }
+\put(53.304,-254.89){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Recognition }
+\put(53.304,-269.77){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}from }
+\put(53.304,-284.65){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Handwriting }
+\put(53.304,-299.53){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Using Fuzzy }
+\put(53.304,-314.53){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Logic }
+\put(138.5,-269.77){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Fuzzy }
+\put(138.5,-284.65){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Model }
+\put(209.33,-262.33){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Fuzzy }
+\put(209.33,-277.21){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Inference }
+\put(209.33,-292.09){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}System }
+\put(273.17,-269.77){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Custom }
+\put(273.17,-284.65){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}dataset }
+\put(343.99,-277.21){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}50 }
+\put(414.91,-254.89){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Anger, }
+\put(414.91,-269.77){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Fear, }
+\put(414.91,-284.65){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Happiness, }
+\put(414.91,-299.53){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Sadness }
+\put(478.78,-277.21){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}82\% }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(47.4pt, -228.82pt) -- (48.36pt, -228.82pt)
+ -- (48.36pt, -228.82pt)
+ -- (48.36pt, -227.86pt)
+ -- (48.36pt, -227.86pt)
+ -- (47.4pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(48.36pt, -228.82pt) -- (132.504pt, -228.82pt)
+ -- (132.504pt, -228.82pt)
+ -- (132.504pt, -227.86pt)
+ -- (132.504pt, -227.86pt)
+ -- (48.36pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -228.82pt) -- (133.46pt, -228.82pt)
+ -- (133.46pt, -228.82pt)
+ -- (133.46pt, -227.86pt)
+ -- (133.46pt, -227.86pt)
+ -- (132.5pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(133.46pt, -228.82pt) -- (203.444pt, -228.82pt)
+ -- (203.444pt, -228.82pt)
+ -- (203.444pt, -227.86pt)
+ -- (203.444pt, -227.86pt)
+ -- (133.46pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -228.82pt) -- (204.41pt, -228.82pt)
+ -- (204.41pt, -228.82pt)
+ -- (204.41pt, -227.86pt)
+ -- (204.41pt, -227.86pt)
+ -- (203.45pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(204.41pt, -228.82pt) -- (267.17pt, -228.82pt)
+ -- (267.17pt, -228.82pt)
+ -- (267.17pt, -227.86pt)
+ -- (267.17pt, -227.86pt)
+ -- (204.41pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -228.82pt) -- (268.13pt, -228.82pt)
+ -- (268.13pt, -228.82pt)
+ -- (268.13pt, -227.86pt)
+ -- (268.13pt, -227.86pt)
+ -- (267.17pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(268.13pt, -228.82pt) -- (338.114pt, -228.82pt)
+ -- (338.114pt, -228.82pt)
+ -- (338.114pt, -227.86pt)
+ -- (338.114pt, -227.86pt)
+ -- (268.13pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -228.82pt) -- (339.07pt, -228.82pt)
+ -- (339.07pt, -228.82pt)
+ -- (339.07pt, -227.86pt)
+ -- (339.07pt, -227.86pt)
+ -- (338.11pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(339.07pt, -228.82pt) -- (409.03pt, -228.82pt)
+ -- (409.03pt, -228.82pt)
+ -- (409.03pt, -227.86pt)
+ -- (409.03pt, -227.86pt)
+ -- (339.07pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -228.82pt) -- (409.99pt, -228.82pt)
+ -- (409.99pt, -228.82pt)
+ -- (409.99pt, -227.86pt)
+ -- (409.99pt, -227.86pt)
+ -- (409.03pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.99pt, -228.82pt) -- (472.774pt, -228.82pt)
+ -- (472.774pt, -228.82pt)
+ -- (472.774pt, -227.86pt)
+ -- (472.774pt, -227.86pt)
+ -- (409.99pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -228.82pt) -- (473.74pt, -228.82pt)
+ -- (473.74pt, -228.82pt)
+ -- (473.74pt, -227.86pt)
+ -- (473.74pt, -227.86pt)
+ -- (472.78pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(473.74pt, -228.82pt) -- (533.62pt, -228.82pt)
+ -- (533.62pt, -228.82pt)
+ -- (533.62pt, -227.86pt)
+ -- (533.62pt, -227.86pt)
+ -- (473.74pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -228.82pt) -- (534.58pt, -228.82pt)
+ -- (534.58pt, -228.82pt)
+ -- (534.58pt, -227.86pt)
+ -- (534.58pt, -227.86pt)
+ -- (533.62pt, -227.86pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(47.4pt, -318.25pt) -- (48.36pt, -318.25pt)
+ -- (48.36pt, -318.25pt)
+ -- (48.36pt, -228.826pt)
+ -- (48.36pt, -228.826pt)
+ -- (47.4pt, -228.826pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -318.25pt) -- (133.46pt, -318.25pt)
+ -- (133.46pt, -318.25pt)
+ -- (133.46pt, -228.826pt)
+ -- (133.46pt, -228.826pt)
+ -- (132.5pt, -228.826pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -318.25pt) -- (204.41pt, -318.25pt)
+ -- (204.41pt, -318.25pt)
+ -- (204.41pt, -228.826pt)
+ -- (204.41pt, -228.826pt)
+ -- (203.45pt, -228.826pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -318.25pt) -- (268.13pt, -318.25pt)
+ -- (268.13pt, -318.25pt)
+ -- (268.13pt, -228.826pt)
+ -- (268.13pt, -228.826pt)
+ -- (267.17pt, -228.826pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -318.25pt) -- (339.07pt, -318.25pt)
+ -- (339.07pt, -318.25pt)
+ -- (339.07pt, -228.826pt)
+ -- (339.07pt, -228.826pt)
+ -- (338.11pt, -228.826pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -318.25pt) -- (409.99pt, -318.25pt)
+ -- (409.99pt, -318.25pt)
+ -- (409.99pt, -228.826pt)
+ -- (409.99pt, -228.826pt)
+ -- (409.03pt, -228.826pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -318.25pt) -- (473.74pt, -318.25pt)
+ -- (473.74pt, -318.25pt)
+ -- (473.74pt, -228.826pt)
+ -- (473.74pt, -228.826pt)
+ -- (472.78pt, -228.826pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -318.25pt) -- (534.58pt, -318.25pt)
+ -- (534.58pt, -318.25pt)
+ -- (534.58pt, -228.826pt)
+ -- (534.58pt, -228.826pt)
+ -- (533.62pt, -228.826pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -408.63pt) -- (132.504pt, -408.63pt)
+ -- (132.504pt, -408.63pt)
+ -- (132.504pt, -319.206pt)
+ -- (132.504pt, -319.206pt)
+ -- (48.48pt, -319.206pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -408.63pt) -- (132.504pt, -408.63pt)
+ -- (132.504pt, -408.63pt)
+ -- (132.504pt, -319.206pt)
+ -- (132.504pt, -319.206pt)
+ -- (48.48pt, -319.206pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(53.304,-330.37){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}On-line }
+\put(53.304,-345.25){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Emotion }
+\put(53.304,-360.13){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Recognition }
+\put(53.304,-375.01){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}from }
+\put(53.304,-389.89){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Handwriting }
+\put(53.304,-404.77){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}using HMM }
+\put(138.5,-360.13){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}HMM-}
+\put(138.5,-375.01){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Model }
+\put(209.33,-352.69){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Hidden }
+\put(209.33,-367.57){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Markov }
+\put(209.33,-382.45){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Models }
+\put(273.17,-360.13){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Custom }
+\put(273.17,-375.01){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}dataset }
+\put(343.99,-367.57){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}20 }
+\put(414.91,-352.69){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Anger, }
+\put(414.91,-367.57){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Happiness, }
+\put(414.91,-382.45){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Sadness }
+\put(478.78,-367.57){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}81\% }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(47.4pt, -319.21pt) -- (48.36pt, -319.21pt)
+ -- (48.36pt, -319.21pt)
+ -- (48.36pt, -318.25pt)
+ -- (48.36pt, -318.25pt)
+ -- (47.4pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(48.36pt, -319.21pt) -- (132.504pt, -319.21pt)
+ -- (132.504pt, -319.21pt)
+ -- (132.504pt, -318.25pt)
+ -- (132.504pt, -318.25pt)
+ -- (48.36pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -319.21pt) -- (133.46pt, -319.21pt)
+ -- (133.46pt, -319.21pt)
+ -- (133.46pt, -318.25pt)
+ -- (133.46pt, -318.25pt)
+ -- (132.5pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(133.46pt, -319.21pt) -- (203.444pt, -319.21pt)
+ -- (203.444pt, -319.21pt)
+ -- (203.444pt, -318.25pt)
+ -- (203.444pt, -318.25pt)
+ -- (133.46pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -319.21pt) -- (204.41pt, -319.21pt)
+ -- (204.41pt, -319.21pt)
+ -- (204.41pt, -318.25pt)
+ -- (204.41pt, -318.25pt)
+ -- (203.45pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(204.41pt, -319.21pt) -- (267.17pt, -319.21pt)
+ -- (267.17pt, -319.21pt)
+ -- (267.17pt, -318.25pt)
+ -- (267.17pt, -318.25pt)
+ -- (204.41pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -319.21pt) -- (268.13pt, -319.21pt)
+ -- (268.13pt, -319.21pt)
+ -- (268.13pt, -318.25pt)
+ -- (268.13pt, -318.25pt)
+ -- (267.17pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(268.13pt, -319.21pt) -- (338.114pt, -319.21pt)
+ -- (338.114pt, -319.21pt)
+ -- (338.114pt, -318.25pt)
+ -- (338.114pt, -318.25pt)
+ -- (268.13pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -319.21pt) -- (339.07pt, -319.21pt)
+ -- (339.07pt, -319.21pt)
+ -- (339.07pt, -318.25pt)
+ -- (339.07pt, -318.25pt)
+ -- (338.11pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(339.07pt, -319.21pt) -- (409.03pt, -319.21pt)
+ -- (409.03pt, -319.21pt)
+ -- (409.03pt, -318.25pt)
+ -- (409.03pt, -318.25pt)
+ -- (339.07pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -319.21pt) -- (409.99pt, -319.21pt)
+ -- (409.99pt, -319.21pt)
+ -- (409.99pt, -318.25pt)
+ -- (409.99pt, -318.25pt)
+ -- (409.03pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.99pt, -319.21pt) -- (472.774pt, -319.21pt)
+ -- (472.774pt, -319.21pt)
+ -- (472.774pt, -318.25pt)
+ -- (472.774pt, -318.25pt)
+ -- (409.99pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -319.21pt) -- (473.74pt, -319.21pt)
+ -- (473.74pt, -319.21pt)
+ -- (473.74pt, -318.25pt)
+ -- (473.74pt, -318.25pt)
+ -- (472.78pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(473.74pt, -319.21pt) -- (533.62pt, -319.21pt)
+ -- (533.62pt, -319.21pt)
+ -- (533.62pt, -318.25pt)
+ -- (533.62pt, -318.25pt)
+ -- (473.74pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -319.21pt) -- (534.58pt, -319.21pt)
+ -- (534.58pt, -319.21pt)
+ -- (534.58pt, -318.25pt)
+ -- (534.58pt, -318.25pt)
+ -- (533.62pt, -318.25pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(47.4pt, -408.63pt) -- (48.36pt, -408.63pt)
+ -- (48.36pt, -408.63pt)
+ -- (48.36pt, -319.206pt)
+ -- (48.36pt, -319.206pt)
+ -- (47.4pt, -319.206pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -408.63pt) -- (133.46pt, -408.63pt)
+ -- (133.46pt, -408.63pt)
+ -- (133.46pt, -319.206pt)
+ -- (133.46pt, -319.206pt)
+ -- (132.5pt, -319.206pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -408.63pt) -- (204.41pt, -408.63pt)
+ -- (204.41pt, -408.63pt)
+ -- (204.41pt, -319.206pt)
+ -- (204.41pt, -319.206pt)
+ -- (203.45pt, -319.206pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -408.63pt) -- (268.13pt, -408.63pt)
+ -- (268.13pt, -408.63pt)
+ -- (268.13pt, -319.206pt)
+ -- (268.13pt, -319.206pt)
+ -- (267.17pt, -319.206pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -408.63pt) -- (339.07pt, -408.63pt)
+ -- (339.07pt, -408.63pt)
+ -- (339.07pt, -319.206pt)
+ -- (339.07pt, -319.206pt)
+ -- (338.11pt, -319.206pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -408.63pt) -- (409.99pt, -408.63pt)
+ -- (409.99pt, -408.63pt)
+ -- (409.99pt, -319.206pt)
+ -- (409.99pt, -319.206pt)
+ -- (409.03pt, -319.206pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -408.63pt) -- (473.74pt, -408.63pt)
+ -- (473.74pt, -408.63pt)
+ -- (473.74pt, -319.206pt)
+ -- (473.74pt, -319.206pt)
+ -- (472.78pt, -319.206pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -408.63pt) -- (534.58pt, -408.63pt)
+ -- (534.58pt, -408.63pt)
+ -- (534.58pt, -319.206pt)
+ -- (534.58pt, -319.206pt)
+ -- (533.62pt, -319.206pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -513.87pt) -- (132.504pt, -513.87pt)
+ -- (132.504pt, -513.87pt)
+ -- (132.504pt, -409.59pt)
+ -- (132.504pt, -409.59pt)
+ -- (48.48pt, -409.59pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -513.87pt) -- (132.504pt, -513.87pt)
+ -- (132.504pt, -513.87pt)
+ -- (132.504pt, -409.59pt)
+ -- (132.504pt, -409.59pt)
+ -- (48.48pt, -409.59pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(53.304,-420.75){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}TEmoDec: }
+\put(53.304,-435.63){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Emotion }
+\put(53.304,-450.51){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Detection from }
+\put(53.304,-465.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Handwritten }
+\put(53.304,-480.27){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Text using }
+\put(53.304,-495.15){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Agglomerative }
+\put(53.304,-510.03){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Clustering }
+\put(138.5,-457.95){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Clustering }
+\put(138.5,-472.83){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Approach }
+\put(209.33,-435.63){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Agglomer}
+\put(209.33,-450.51){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}ative }
+\put(209.33,-465.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Hierarchic}
+\put(209.33,-480.27){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}al }
+\put(209.33,-495.15){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Clustering }
+\put(273.17,-457.95){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Custom }
+\put(273.17,-472.83){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}dataset }
+\put(343.99,-465.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}30 }
+\put(414.91,-420.75){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Anger, }
+\put(414.91,-435.63){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Sadness, }
+\put(414.91,-450.51){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Depressio}
+\put(414.91,-465.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}n, }
+\put(414.91,-480.27){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Happiness, }
+\put(414.91,-495.15){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Excitemen}
+\put(414.91,-510.03){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}t }
+\put(478.78,-465.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}71.6\% }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(47.4pt, -409.59pt) -- (48.36pt, -409.59pt)
+ -- (48.36pt, -409.59pt)
+ -- (48.36pt, -408.63pt)
+ -- (48.36pt, -408.63pt)
+ -- (47.4pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(48.36pt, -409.59pt) -- (132.504pt, -409.59pt)
+ -- (132.504pt, -409.59pt)
+ -- (132.504pt, -408.63pt)
+ -- (132.504pt, -408.63pt)
+ -- (48.36pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -409.59pt) -- (133.46pt, -409.59pt)
+ -- (133.46pt, -409.59pt)
+ -- (133.46pt, -408.63pt)
+ -- (133.46pt, -408.63pt)
+ -- (132.5pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(133.46pt, -409.59pt) -- (203.444pt, -409.59pt)
+ -- (203.444pt, -409.59pt)
+ -- (203.444pt, -408.63pt)
+ -- (203.444pt, -408.63pt)
+ -- (133.46pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -409.59pt) -- (204.41pt, -409.59pt)
+ -- (204.41pt, -409.59pt)
+ -- (204.41pt, -408.63pt)
+ -- (204.41pt, -408.63pt)
+ -- (203.45pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(204.41pt, -409.59pt) -- (267.17pt, -409.59pt)
+ -- (267.17pt, -409.59pt)
+ -- (267.17pt, -408.63pt)
+ -- (267.17pt, -408.63pt)
+ -- (204.41pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -409.59pt) -- (268.13pt, -409.59pt)
+ -- (268.13pt, -409.59pt)
+ -- (268.13pt, -408.63pt)
+ -- (268.13pt, -408.63pt)
+ -- (267.17pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(268.13pt, -409.59pt) -- (338.114pt, -409.59pt)
+ -- (338.114pt, -409.59pt)
+ -- (338.114pt, -408.63pt)
+ -- (338.114pt, -408.63pt)
+ -- (268.13pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -409.59pt) -- (339.07pt, -409.59pt)
+ -- (339.07pt, -409.59pt)
+ -- (339.07pt, -408.63pt)
+ -- (339.07pt, -408.63pt)
+ -- (338.11pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(339.07pt, -409.59pt) -- (409.03pt, -409.59pt)
+ -- (409.03pt, -409.59pt)
+ -- (409.03pt, -408.63pt)
+ -- (409.03pt, -408.63pt)
+ -- (339.07pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -409.59pt) -- (409.99pt, -409.59pt)
+ -- (409.99pt, -409.59pt)
+ -- (409.99pt, -408.63pt)
+ -- (409.99pt, -408.63pt)
+ -- (409.03pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.99pt, -409.59pt) -- (472.774pt, -409.59pt)
+ -- (472.774pt, -409.59pt)
+ -- (472.774pt, -408.63pt)
+ -- (472.774pt, -408.63pt)
+ -- (409.99pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -409.59pt) -- (473.74pt, -409.59pt)
+ -- (473.74pt, -409.59pt)
+ -- (473.74pt, -408.63pt)
+ -- (473.74pt, -408.63pt)
+ -- (472.78pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(473.74pt, -409.59pt) -- (533.62pt, -409.59pt)
+ -- (533.62pt, -409.59pt)
+ -- (533.62pt, -408.63pt)
+ -- (533.62pt, -408.63pt)
+ -- (473.74pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -409.59pt) -- (534.58pt, -409.59pt)
+ -- (534.58pt, -409.59pt)
+ -- (534.58pt, -408.63pt)
+ -- (534.58pt, -408.63pt)
+ -- (533.62pt, -408.63pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(47.4pt, -513.87pt) -- (48.36pt, -513.87pt)
+ -- (48.36pt, -513.87pt)
+ -- (48.36pt, -409.59pt)
+ -- (48.36pt, -409.59pt)
+ -- (47.4pt, -409.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -513.87pt) -- (133.46pt, -513.87pt)
+ -- (133.46pt, -513.87pt)
+ -- (133.46pt, -409.59pt)
+ -- (133.46pt, -409.59pt)
+ -- (132.5pt, -409.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -513.87pt) -- (204.41pt, -513.87pt)
+ -- (204.41pt, -513.87pt)
+ -- (204.41pt, -409.59pt)
+ -- (204.41pt, -409.59pt)
+ -- (203.45pt, -409.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -513.87pt) -- (268.13pt, -513.87pt)
+ -- (268.13pt, -513.87pt)
+ -- (268.13pt, -409.59pt)
+ -- (268.13pt, -409.59pt)
+ -- (267.17pt, -409.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -513.87pt) -- (339.07pt, -513.87pt)
+ -- (339.07pt, -513.87pt)
+ -- (339.07pt, -409.59pt)
+ -- (339.07pt, -409.59pt)
+ -- (338.11pt, -409.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -513.87pt) -- (409.99pt, -513.87pt)
+ -- (409.99pt, -513.87pt)
+ -- (409.99pt, -409.59pt)
+ -- (409.99pt, -409.59pt)
+ -- (409.03pt, -409.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -513.87pt) -- (473.74pt, -513.87pt)
+ -- (473.74pt, -513.87pt)
+ -- (473.74pt, -409.59pt)
+ -- (473.74pt, -409.59pt)
+ -- (472.78pt, -409.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -513.87pt) -- (534.58pt, -513.87pt)
+ -- (534.58pt, -513.87pt)
+ -- (534.58pt, -409.59pt)
+ -- (534.58pt, -409.59pt)
+ -- (533.62pt, -409.59pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -604.14pt) -- (132.504pt, -604.14pt)
+ -- (132.504pt, -604.14pt)
+ -- (132.504pt, -514.836pt)
+ -- (132.504pt, -514.836pt)
+ -- (48.48pt, -514.836pt) -- cycle
+;
+\begin{scope}
+\clip
+(48.48pt, -604.14pt) -- (132.504pt, -604.14pt)
+ -- (132.504pt, -604.14pt)
+ -- (132.504pt, -514.836pt)
+ -- (132.504pt, -514.836pt)
+ -- (48.48pt, -514.836pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(53.304,-525.99){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Personality }
+\put(53.304,-540.87){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Identification }
+\put(53.304,-555.75){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}through }
+\put(53.304,-570.63){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Handwriting }
+\put(53.304,-585.54){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Analysis: A }
+\put(53.304,-600.42){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Review }
+\put(138.5,-563.19){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}SVM-Based }
+\put(209.33,-548.31){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Support }
+\put(209.33,-563.19){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Vector }
+\put(209.33,-578.1){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Machines }
+\put(273.17,-555.75){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Custom }
+\put(273.17,-570.63){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}dataset }
+\put(343.99,-563.19){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}100 }
+\put(414.91,-525.99){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Personalit}
+\put(414.91,-540.87){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}y Traits }
+\put(414.91,-555.75){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(Extravers}
+\put(414.91,-570.63){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}ion, }
+\put(414.91,-585.54){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Neuroticis}
+\put(414.91,-600.42){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}m) }
+\put(478.78,-563.19){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}70-75\% }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(47.4pt, -514.83pt) -- (48.36pt, -514.83pt)
+ -- (48.36pt, -514.83pt)
+ -- (48.36pt, -513.87pt)
+ -- (48.36pt, -513.87pt)
+ -- (47.4pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(48.36pt, -514.83pt) -- (132.504pt, -514.83pt)
+ -- (132.504pt, -514.83pt)
+ -- (132.504pt, -513.87pt)
+ -- (132.504pt, -513.87pt)
+ -- (48.36pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -514.83pt) -- (133.46pt, -514.83pt)
+ -- (133.46pt, -514.83pt)
+ -- (133.46pt, -513.87pt)
+ -- (133.46pt, -513.87pt)
+ -- (132.5pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(133.46pt, -514.83pt) -- (203.444pt, -514.83pt)
+ -- (203.444pt, -514.83pt)
+ -- (203.444pt, -513.87pt)
+ -- (203.444pt, -513.87pt)
+ -- (133.46pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -514.83pt) -- (204.41pt, -514.83pt)
+ -- (204.41pt, -514.83pt)
+ -- (204.41pt, -513.87pt)
+ -- (204.41pt, -513.87pt)
+ -- (203.45pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(204.41pt, -514.83pt) -- (267.17pt, -514.83pt)
+ -- (267.17pt, -514.83pt)
+ -- (267.17pt, -513.87pt)
+ -- (267.17pt, -513.87pt)
+ -- (204.41pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -514.83pt) -- (268.13pt, -514.83pt)
+ -- (268.13pt, -514.83pt)
+ -- (268.13pt, -513.87pt)
+ -- (268.13pt, -513.87pt)
+ -- (267.17pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(268.13pt, -514.83pt) -- (338.114pt, -514.83pt)
+ -- (338.114pt, -514.83pt)
+ -- (338.114pt, -513.87pt)
+ -- (338.114pt, -513.87pt)
+ -- (268.13pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -514.83pt) -- (339.07pt, -514.83pt)
+ -- (339.07pt, -514.83pt)
+ -- (339.07pt, -513.87pt)
+ -- (339.07pt, -513.87pt)
+ -- (338.11pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(339.07pt, -514.83pt) -- (409.03pt, -514.83pt)
+ -- (409.03pt, -514.83pt)
+ -- (409.03pt, -513.87pt)
+ -- (409.03pt, -513.87pt)
+ -- (339.07pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -514.83pt) -- (409.99pt, -514.83pt)
+ -- (409.99pt, -514.83pt)
+ -- (409.99pt, -513.87pt)
+ -- (409.99pt, -513.87pt)
+ -- (409.03pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.99pt, -514.83pt) -- (472.774pt, -514.83pt)
+ -- (472.774pt, -514.83pt)
+ -- (472.774pt, -513.87pt)
+ -- (472.774pt, -513.87pt)
+ -- (409.99pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -514.83pt) -- (473.74pt, -514.83pt)
+ -- (473.74pt, -514.83pt)
+ -- (473.74pt, -513.87pt)
+ -- (473.74pt, -513.87pt)
+ -- (472.78pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(473.74pt, -514.83pt) -- (533.62pt, -514.83pt)
+ -- (533.62pt, -514.83pt)
+ -- (533.62pt, -513.87pt)
+ -- (533.62pt, -513.87pt)
+ -- (473.74pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -514.83pt) -- (534.58pt, -514.83pt)
+ -- (534.58pt, -514.83pt)
+ -- (534.58pt, -513.87pt)
+ -- (534.58pt, -513.87pt)
+ -- (533.62pt, -513.87pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(47.4pt, -604.26pt) -- (48.36pt, -604.26pt)
+ -- (48.36pt, -604.26pt)
+ -- (48.36pt, -514.836pt)
+ -- (48.36pt, -514.836pt)
+ -- (47.4pt, -514.836pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(47.4pt, -605.22pt) -- (48.36pt, -605.22pt)
+ -- (48.36pt, -605.22pt)
+ -- (48.36pt, -604.26pt)
+ -- (48.36pt, -604.26pt)
+ -- (47.4pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(47.4pt, -605.22pt) -- (48.36pt, -605.22pt)
+ -- (48.36pt, -605.22pt)
+ -- (48.36pt, -604.26pt)
+ -- (48.36pt, -604.26pt)
+ -- (47.4pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(48.36pt, -605.22pt) -- (132.504pt, -605.22pt)
+ -- (132.504pt, -605.22pt)
+ -- (132.504pt, -604.26pt)
+ -- (132.504pt, -604.26pt)
+ -- (48.36pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -604.26pt) -- (133.46pt, -604.26pt)
+ -- (133.46pt, -604.26pt)
+ -- (133.46pt, -514.836pt)
+ -- (133.46pt, -514.836pt)
+ -- (132.5pt, -514.836pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(132.5pt, -605.22pt) -- (133.46pt, -605.22pt)
+ -- (133.46pt, -605.22pt)
+ -- (133.46pt, -604.26pt)
+ -- (133.46pt, -604.26pt)
+ -- (132.5pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(133.46pt, -605.22pt) -- (203.444pt, -605.22pt)
+ -- (203.444pt, -605.22pt)
+ -- (203.444pt, -604.26pt)
+ -- (203.444pt, -604.26pt)
+ -- (133.46pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -604.26pt) -- (204.41pt, -604.26pt)
+ -- (204.41pt, -604.26pt)
+ -- (204.41pt, -514.836pt)
+ -- (204.41pt, -514.836pt)
+ -- (203.45pt, -514.836pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(203.45pt, -605.22pt) -- (204.41pt, -605.22pt)
+ -- (204.41pt, -605.22pt)
+ -- (204.41pt, -604.26pt)
+ -- (204.41pt, -604.26pt)
+ -- (203.45pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(204.41pt, -605.22pt) -- (267.17pt, -605.22pt)
+ -- (267.17pt, -605.22pt)
+ -- (267.17pt, -604.26pt)
+ -- (267.17pt, -604.26pt)
+ -- (204.41pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -604.26pt) -- (268.13pt, -604.26pt)
+ -- (268.13pt, -604.26pt)
+ -- (268.13pt, -514.836pt)
+ -- (268.13pt, -514.836pt)
+ -- (267.17pt, -514.836pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(267.17pt, -605.22pt) -- (268.13pt, -605.22pt)
+ -- (268.13pt, -605.22pt)
+ -- (268.13pt, -604.26pt)
+ -- (268.13pt, -604.26pt)
+ -- (267.17pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(268.13pt, -605.22pt) -- (338.114pt, -605.22pt)
+ -- (338.114pt, -605.22pt)
+ -- (338.114pt, -604.26pt)
+ -- (338.114pt, -604.26pt)
+ -- (268.13pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -604.26pt) -- (339.07pt, -604.26pt)
+ -- (339.07pt, -604.26pt)
+ -- (339.07pt, -514.836pt)
+ -- (339.07pt, -514.836pt)
+ -- (338.11pt, -514.836pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(338.11pt, -605.22pt) -- (339.07pt, -605.22pt)
+ -- (339.07pt, -605.22pt)
+ -- (339.07pt, -604.26pt)
+ -- (339.07pt, -604.26pt)
+ -- (338.11pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(339.07pt, -605.22pt) -- (409.03pt, -605.22pt)
+ -- (409.03pt, -605.22pt)
+ -- (409.03pt, -604.26pt)
+ -- (409.03pt, -604.26pt)
+ -- (339.07pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -604.26pt) -- (409.99pt, -604.26pt)
+ -- (409.99pt, -604.26pt)
+ -- (409.99pt, -514.836pt)
+ -- (409.99pt, -514.836pt)
+ -- (409.03pt, -514.836pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.03pt, -605.22pt) -- (409.99pt, -605.22pt)
+ -- (409.99pt, -605.22pt)
+ -- (409.99pt, -604.26pt)
+ -- (409.99pt, -604.26pt)
+ -- (409.03pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(409.99pt, -605.22pt) -- (472.774pt, -605.22pt)
+ -- (472.774pt, -605.22pt)
+ -- (472.774pt, -604.26pt)
+ -- (472.774pt, -604.26pt)
+ -- (409.99pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -604.26pt) -- (473.74pt, -604.26pt)
+ -- (473.74pt, -604.26pt)
+ -- (473.74pt, -514.836pt)
+ -- (473.74pt, -514.836pt)
+ -- (472.78pt, -514.836pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(472.78pt, -605.22pt) -- (473.74pt, -605.22pt)
+ -- (473.74pt, -605.22pt)
+ -- (473.74pt, -604.26pt)
+ -- (473.74pt, -604.26pt)
+ -- (472.78pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(473.74pt, -605.22pt) -- (533.62pt, -605.22pt)
+ -- (533.62pt, -605.22pt)
+ -- (533.62pt, -604.26pt)
+ -- (533.62pt, -604.26pt)
+ -- (473.74pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -604.26pt) -- (534.58pt, -604.26pt)
+ -- (534.58pt, -604.26pt)
+ -- (534.58pt, -514.836pt)
+ -- (534.58pt, -514.836pt)
+ -- (533.62pt, -514.836pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -605.22pt) -- (534.58pt, -605.22pt)
+ -- (534.58pt, -605.22pt)
+ -- (534.58pt, -604.26pt)
+ -- (534.58pt, -604.26pt)
+ -- (533.62pt, -604.26pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(533.62pt, -605.22pt) -- (534.58pt, -605.22pt)
+ -- (534.58pt, -605.22pt)
+ -- (534.58pt, -604.26pt)
+ -- (534.58pt, -604.26pt)
+ -- (533.62pt, -604.26pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-616.38){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}  }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(276.65,-73.15997){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Methodology }
+\put(93.02,-108.82){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}The research involves collecting a diverse dataset of handwriting samples from }
+\put(57.024,-136.42){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}participants, coupled with precise emotional annotations obtained through self-reports and }
+\put(57.024,-164.02){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}controlled emotion induction experiments. Image preprocessing extracts macro-level features }
+\put(57.024,-191.62){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(slant, spacing) and micro-level features (letterforms, strokes) from the handwritten data. These }
+\put(57.024,-219.22){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}features train machine learning models that combine Convolutional Neural Networks (CNNs) for }
+\put(57.024,-246.85){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}feature extraction and Hidden Markov Models (HMMs) for sequence modeling and emotion }
+\put(57.024,-274.45){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}classification. }
+\put(93.02,-309.97){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}To ensure accuracy, reliability, and applicability of the proposed handwriting analysis }
+\put(57.024,-337.57){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}system for emotion recognition. The validation process will include a vigorous analysis of system }
+\put(57.024,-365.17){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}performance using benchmarks and metrics that are acknowledged in the light of previous work, }
+\put(57.024,-392.77){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}for example, EMOTHAW, TEmoDec, and so on. The accuracy of the emotion classification of the }
+\put(57.024,-420.39){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}system will be tested on a large dataset of handwriting samples from different demographics, }
+\put(57.024,-447.99){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}handwriting styles, and emotional states. }
+\put(93.02,-483.63){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}The hybrid CNN-HMM model's performance is rigorously evaluated using cross-}
+\put(57.024,-511.23){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}validation techniques and standard metrics like classification accuracy and F1-scores. Results are }
+\put(57.024,-538.83){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}benchmarked against prior work on emotion recognition from handwriting. Strengths, limitations }
+\put(57.024,-566.43){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}and potential improvements of the approach are discussed. Ethical implications around privacy, }
+\put(57.024,-594.06){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}bias and responsible implementation are also examined. }
+\put(93.02,-629.58){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Stratified k-fold cross-validation will be used to evaluate the performance of the hybrid }
+\put(57.024,-657.18){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}CNN-HMM algorithm. The dataset is here split into k folds, and the algorithm is trained and tested }
+\put(57.024,-684.776){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}on different folds iteratively. }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(93.02,-73.15997){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(93.02,-108.82){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}The evaluation technique is robust, and the algorithm can prevent overfitting and make }
+\put(57.024,-136.42){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}testing on unseen data possible. In the handwriting dataset, it first is stratified based on the emotion }
+\put(57.024,-164.02){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}classes, hence making every fold contain a representative distribution of the classes. The dataset }
+\put(57.024,-191.62){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}has been split into k equal-sized folds or subsets. Then, the algorithm is trained on k-1 folds and }
+\put(57.024,-219.22){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}tested on the remaining fold. This process is repeated k times, and every fold has once been used }
+\put(57.024,-246.85){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}as the test set. A performance metric is computed for each fold and averaged to obtain an overall }
+\put(57.024,-274.45){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}estimate of the algorithm's performance. }
+\put(93.02,-309.97){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}The most common evaluation metrics for multi-class classification tasks are the F1-score, }
+\put(57.024,-337.57){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}which combines precision and recall into a single measure. F1-scores for each emotion class can }
+\put(57.024,-365.17){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}be calculated using the following formula: }
+\put(93.02,-400.81){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}F1-score = (2 × Precision × Recall) / (Precision + Recall) }
+\put(93.02,-436.35){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Where: Precision = TP / (TP + FP) Recall = TP / (TP + FN) }
+\put(93.02,-471.99){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}TP (True Positives) is the number of instances correctly classified as belonging to a }
+\put(57.024,-499.59){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}particular emotion class. FP (False Positives) is the number of instances incorrectly classified as }
+\put(57.024,-527.19){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}belonging to that emotion class. FN (False Negatives) is the number of instances of that emotion }
+\put(57.024,-554.79){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}class that were misclassified. }
+\put(93.02,-590.46){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}In order to obtain an overall F1-score for the multi-class emotion recognition task, F1-}
+\put(57.024,-618.06){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}scores for individual classes can be combined using either a weighted average or macro-averaging }
+\put(57.024,-645.66){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}approach. Macro-averaged F1-score treats every class equally and can be calculated as follows: }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(93.02,-73.15997){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Macro-averaged F1-score = (F1-score\_class1 + F1-score\_class2 + ... + F1-}
+\put(57.024,-100.78){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}score\_classN) / N }
+\put(93.02,-136.42){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Where N is the total number of emotion classes. }
+\put(93.02,-171.94){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Another useful metric is the classification accuracy, which calculates the fraction of }
+\put(57.024,-199.54){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}correctly classified instances out of the total number of instances. Accuracy can be obtained as }
+\put(57.024,-227.14){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}follows: }
+\put(93.02,-262.81){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Accuracy = (TP + TN) / (TP + FP + FN + TN) }
+\put(93.02,-298.45){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Where TN (True Negatives) is the number of instances correctly classified as not belonging }
+\put(57.024,-326.05){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}to a particular emotion class. }
+\put(93.02,-361.57){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Stratified k-fold cross-validation and such evaluation metrics will help in the assessment }
+\put(57.024,-389.17){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}of the hybrid CNN-HMM model and provide a reliable and statistically sound estimate of its ability }
+\put(57.024,-416.79){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}to recognize emotions in the handwriting dataset. }
+\put(57.024,-452.43){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}  }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(281.69,-73.15997){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Conclusion }
+\put(93.02,-108.82){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}The proposed handwriting-based emotion recognition system demonstrates the feasibility }
+\put(57.024,-136.42){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}of using minor behavioural indications to get insights into human emotional experiences. This }
+\put(57.024,-164.02){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}study provides a novel multimodal approach for automatic emotion detection from handwriting }
+\put(57.024,-191.62){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}data by merging modern image processing techniques with hybrid machine learning models based }
+\put(57.024,-219.22){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}on CNNs and HMMs. }
+\put(93.02,-254.77){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}The created method produces promising results, exceeding previous studies in reliably }
+\put(57.024,-282.37){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}recognising a variety of emotional states such as happy, sorrow, rage, and others. However, it is }
+\put(57.024,-309.97){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}critical to recognise the limits of the current technique, such as its reliance on high-quality }
+\put(57.024,-337.57){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}handwriting samples and the potential impact of age, cultural background, or handwriting styles }
+\put(57.024,-365.17){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}on performance. }
+\put(93.02,-400.81){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Despite the limitations, the research findings have important implications for a variety of }
+\put(57.024,-428.43){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}disciplines. In educational contexts, the method might be used to monitor kids' handwriting for }
+\put(57.024,-456.03){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}early indicators of stress, anxiety, or emotional discomfort, allowing for prompt interventions and }
+\put(57.024,-483.63){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}assistance. Within healthcare, it could be used as an additional tool for mental health screening or }
+\put(57.024,-511.23){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}tracking the evolution of disorders that affect emotional control. Furthermore, this work lays the }
+\put(57.024,-538.83){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}way for broader applications in human-computer interaction and affective computing, in which }
+\put(57.024,-566.43){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}emotion-aware interfaces could tailor user experiences and alter system behaviors based on the }
+\put(57.024,-594.06){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}user's emotional state as determined by their handwriting patterns. }
+\put(93.02,-629.58){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}To exploit the full potential of this research, various further directions are suggested. To }
+\put(57.024,-657.18){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}begin, increasing the scope of the handwriting dataset to encompass a broader range of ethnicities, }
+\put(57.024,-684.776){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}cultural backgrounds, and handwriting styles would improve the system's generalizability. Second, }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-73.15997){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}incorporating new modalities, such as facial expressions or physiological inputs, may improve the }
+\put(57.024,-100.78){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}accuracy and robustness of emotion recognition. }
+\put(93.02,-136.42){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Furthermore, resolving ethical concerns about privacy, data security, and algorithmic bias }
+\put(57.024,-164.02){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}is critical for the appropriate use of such technologies, especially in sensitive areas such as mental }
+\put(57.024,-191.62){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}health and education. Establishing rules and protections will require collaborative efforts from }
+\put(57.024,-219.22){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}psychologists, ethicists, and lawmakers. }
+\put(93.02,-254.77){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}In conclusion, this multiple fields of study shows how psychology, computer vision, and }
+\put(57.024,-282.37){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}machine learning can work together to create new modalities for understanding and enriching }
+\put(57.024,-309.97){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}human emotional experiences. This research opens up new possibilities for improving human-}
+\put(57.024,-337.57){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}computer interaction, individualized interventions, and, eventually, nurturing greater emotional }
+\put(57.024,-365.17){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}awareness and well-being by leveraging the rich information inherent in an individual's }
+\put(57.024,-392.77){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}handwriting. }
+\put(93.02,-428.43){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(93.02,-463.95){\fontsize{12}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\end{document}
